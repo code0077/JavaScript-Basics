@@ -1,0 +1,5 @@
+This is not an author-time binding but a runtime
+binding. It is contextual based on the conditions of the function’s invocation.
+this binding has nothing to do with where a function is
+declared, but has instead everything to do with the manner in which
+the function is called.
