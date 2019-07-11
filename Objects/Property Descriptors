@@ -1,0 +1,30 @@
+var myObject = {
+ a: 2
+};
+Object.getOwnPropertyDescriptor( myObject, "a" );
+// {
+// value: 2,
+// writable: true,
+// enumerable: true,
+// configurable: true
+// }
+As you can see, the property descriptor (called a “data descriptor” since
+it’s only for holding a data value) for our normal object property a is
+much more than just its value of 2. It includes three other character‐
+istics: writable, enumerable, and configurable.
+While we can see what the default values for the property descriptor
+characteristics are when we create a normal property, we can use Ob
+ject.defineProperty(..) to add a new property, or modify an ex‐
+isting one (if it’s configurable!), with the desired characteristics.
+For example:
+var myObject = {};
+Object.defineProperty( myObject, "a", {
+ value: 2,
+ writable: true,
+ configurable: true,
+ enumerable: true
+} );
+myObject.a; // 2
+Using defineProperty(..), we added the plain, normal a property
+to myObject in a manually explicit way. However, you generally wouldn’t use this manual approach unless you wanted to modify one
+of the descriptor characteristics from its normal behavior.

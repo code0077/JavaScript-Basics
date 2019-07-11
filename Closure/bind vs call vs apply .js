@@ -44,6 +44,7 @@ let helloNat = greeting.bind(customer222);
 helloLeo('Hello'); // Hello Leo
 helloNat('Hello'); // Hello Nat
 
+
 /**
  * Call invokes the function and allows you to pass in arguments one by one.
 Apply invokes the function and allows you to pass in arguments as an array.
